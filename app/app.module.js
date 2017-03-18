@@ -13,15 +13,16 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-var core_2 = require('angular2-mapbox/core');
+var angular2_leaflet_components_1 = require('angular2.leaflet.components');
+var angular2_leaflet_components_2 = require('angular2.leaflet.components');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, core_2.MapBoxModule.forRoot("pk.eyJ1IjoiZHVja3MxNiIsImEiOiJjajBlNDc5amMwMWFmMndya2U5Z3VpNzZ6In0.kATInDgIKLPUUHIZDPPn6w")],
-            declarations: [app_component_1.AppComponent],
-            providers: [],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+            declarations: [app_component_1.AppComponent, angular2_leaflet_components_1.CandTLeafletComponent],
+            providers: [angular2_leaflet_components_2.CandTLeafletService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
