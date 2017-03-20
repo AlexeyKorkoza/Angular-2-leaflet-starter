@@ -1,6 +1,14 @@
 (function (global) {
   System.config({
-
+    transpiler: 'ts',
+    typescriptOptions: {
+      tsconfig: true
+    },
+    meta: {
+      'typescript': {
+        "exports": "ts"
+      }
+    },
     paths: {
       'npm:': 'node_modules/'
     },
@@ -15,13 +23,12 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-
+      // остальные пакеты
       'rxjs': 'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
       'angular2.leaflet.components': 'npm:angular2.leaflet.components',
-      'leaflet': 'npm:leaflet',
-      'ts': 'npm:plugin-typescript@4.0.10/lib/plugin.js',
-      'typescript': 'npm:typescript@2.0.3/lib/typescript.js'
+      'ts': 'npm:plugin-typescript/lib/plugin.js',
+      'typescript': 'npm:typescript/lib/typescript.js'
     },
     packages: {
       app: {
@@ -31,7 +38,7 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      'angular-in-memory-web-api': {
+      'angular2-in-memory-web-api': {
         main: './index.js',
         defaultExtension: 'js'
       },
@@ -40,24 +47,6 @@
         defaultExtension: 'js',
         meta: {
           "format": "register"
-        }
-      },
-      'leaflet': {
-        main: './dist/leaflet-src.js',
-        defaultExtension: 'js',
-        meta: {
-          './dist/leaflet.css': {loader: 'css'}
-        }
-      },
-      "ts": {
-        "main": "plugin.js"
-      },
-      "typescript": {
-        "main": "typescript.js",
-        "meta": {
-          "lib/typescript.js": {
-            "exports": "ts"
-          }
         }
       }
     }
