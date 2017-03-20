@@ -6,13 +6,6 @@
 # User-specific stuff:
 .idea/
 
-# Gradle:
-.idea/gradle.xml
-.idea/libraries
-
-# Mongo Explorer plugin:
-.idea/mongoSettings.xml
-
 ## File-based project format:
 *.iws
 
@@ -71,5 +64,5 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-app/**/*.js
-app/**/*.map
+app/*.js
+app/*.map
